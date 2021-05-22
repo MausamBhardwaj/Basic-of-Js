@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample</title>
+		<script src="my.js"></script>
+		<style>
+			#msg{color:red;text-align:center;
+			display:none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			
+			$(document).ready(function(){
+				
+				$("#txt1").keyup(function(){
+					var x=$(this).val();
+					//$("#txt2").val(x.toUpperCase());
+					$("#txt2").val(x);
+				});
+				
+			});
+			
+		</script>
+		
+		
+		<input type="text" id="txt1" />
+		<input type="text" id="txt2" />
+		
+		
+	</body>
+</html>

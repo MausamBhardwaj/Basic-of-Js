@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample</title>
+		<script src="my.js"></script>
+		<style>
+			#msg{color:red;text-align:center;
+			display:none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			
+			$(document).ready(function(){
+				
+				$("#log").submit(function(){
+					
+					var x=$("#uname").val();
+					var y=$("#pwd").val();
+					
+					var r_un=/^([a-zA-Z]{3,10})$/;
+					
+					if(!x.match(r_un))
+					{
+						//$("#msg").html("<b>Plz type UserName</b>");
+						//$("#msg").text("<b>Plz type UserName</b>");
+						$("#msg").html("Plz type UserName").show(2000).delay(2000).fadeOut(1000);
+						return false;
+					}
+				
+				});
+				
+			});
+			
+		</script>
+		
+		
+		<form action="new.php" method="post" id="log" align="center">
+		
+		User Name :
+		<input type="text" id="uname" />
+		<br/><br/>
+		
+		Password :
+		<input type="password" id="pwd" />
+		<br/><br/>
+		
+		<input type="submit" name="sub" id="sub" value="Login" />
+		<input type="reset" name="res" id="res" value="Clear" />
+		
+	</form>
+	
+	<p id="msg"></p>
+		
+		
+	</body>
+</html>

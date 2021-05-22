@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sample</title>
+		<script src="my.js"></script>
+		<style>
+			#para{
+			height:150px;
+			width:150px;
+			background:red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			
+			$(document).ready(function(){
+				$("#para").hide();
+				
+				$("button").click(function(){
+					//$("#para").hide();
+					//$("#para").hide("slow");
+					//$("#para").hide("fast");
+					//$("#para").hide(3000);
+					//$("#para").show(1000);
+					//$("#para").toggle(1000);
+					
+					//$("#para").slideDown(1000);
+					//$("#para").slideUp(1000);
+					//$("#para").slideToggle(1000);
+					
+					//$("#para").fadeIn(1000);
+					//$("#para").fadeOut(1000);
+					//$("#para").fadeToggle(1000);
+					/
+					$("#para").("explode", {pieces: 50}, 1000);
+					
+					
+				});
+				
+			});
+			
+		</script>
+		
+		<button>Click Here</button>
+		
+		<p id="para"> Hai </p>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
